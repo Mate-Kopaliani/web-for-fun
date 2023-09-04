@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const pizza = document.querySelector(".pizza");
     const carbonara = document.querySelector(".carbonara");
     const salad = document.querySelector(".salad");
+    const ice_cream = document.querySelector(".ice-cream");
+    const fondant = document.querySelector(".fondant");
 
     document.querySelector(".search-bar button").addEventListener("click", function() {
         const searchTerm = searchInput.value.toLowerCase();
@@ -13,27 +15,50 @@ document.addEventListener("DOMContentLoaded", function() {
             pizza.style.display = "block";
             carbonara.style.display="none";
             salad.style.display="none";
+            ice_cream.display="none";
+            fondant.display="none";
         } else if ("burger".includes(searchTerm)) {
             pizza.style.display = "none";
             burger.style.display = "block";
             carbonara.style.display="none";
             salad.style.display="none";
+            ice_cream.display="none";
+            fondant.display="none";
         }
         else if("carbonara".includes(searchTerm)){
             carbonara.style.display="block";
             pizza.style.display = "none";
             salad.style.display="none";
             burger.style.display = "none";
+            ice_cream.display="none";
+            fondant.display="none";
         }
         else if("salad".includes(searchTerm)){
             carbonara.style.display="none";
             pizza.style.display = "none";
             salad.style.display="block";
             burger.style.display = "none";
+            ice_cream.display="none";
+            fondant.display="none";
+        }
+        else if("icecream".includes(searchInput)){
+            ice_cream.display="block";
+            pizza.style.display = "none";
+            salad.style.display="none";
+            burger.style.display = "none";
+            fondant.display="none";
+            carbonara.display="none";
+        }
+        else if("fondant".includes(searchInput)){
+            ice_cream.display="none";
+            pizza.style.display = "none";
+            salad.style.display="none";
+            burger.style.display = "none";
+            fondant.display="block";
+            carbonara.display="none";
         }
          else {
-            pizza.style.display = "bo";
-            burger.style.display = "*";
+            // something
         }
     });
 });
